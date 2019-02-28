@@ -1,0 +1,9 @@
+node node_modules\typescript\bin\tsc
+
+..\ng build
+
+
+new class
+
+..\ng g c test
+

@@ -1,0 +1,60 @@
+<ux-layout-app-shell headerAppFullName="TRIMIS - Dashboard"
+                     headerAppShortName="TRIMIS"
+										 headerAppSubtitle="Transport Research and Innovation Monitoring Information System"
+
+                     [headerUserInfos]="(userState | async)?.fullName"
+                    
+									(headerLanguageChanged)="onLanguageChanged($event)"
+                     [navBarNotificationLinks]="notificationLinks"
+                     [navBarTopMenuLinks]="menuLinks"
+										 
+
+                     footerAppVersion="@eui.version"
+                     footerAppReleaseDate="@timestamp@"
+										 [hasSidebar]="true"
+										 [isSidebarInner]="true"
+										[sidebarLinks]="sidebarLinks"
+										[isContractSmall]="true" >
+										
+
+<uxAppShellHeaderRightContent>
+    <ux-layout-header-profile [userInfos]="userInfos">
+        <uxLayoutHeaderProfileMenuContent>
+            <ul>
+                <li><a><i class="icon ion ion-person"></i>See my profile</a></li>
+                <li class="ux-u-bg-color-grey-lightest d-block">
+                    <br>
+                    <h5>Login as :</h5>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="User ID or name">
+                        <span class="input-group-append">
+                            <button class="btn btn-primary" type="button">Sign in</button>
+                        </span>
+                    </div>
+                    <br>
+                </li>
+                <li (click)="onLogout()"><a><i class="icon ion ion-log-out"></i>Logout</a></li>
+            </ul>
+        </uxLayoutHeaderProfileMenuContent>
+    </ux-layout-header-profile>
+</uxAppShellHeaderRightContent>
+
+    <uxAppShellNavBarItemsContent>
+        <ux-layout-nav-bar-action-item iconClass="fa fa-info-circle">
+            <ul>
+                <li><a href="http://www.google.be" target="_blank">About</a></li>
+                <li><a>Contact</a></li>
+            </ul>
+            <ul>
+                <li><a>Legal notice</a></li>
+                <li><a>Glossary</a></li>
+            </ul>
+        </ux-layout-nav-bar-action-item>
+
+        <ux-layout-nav-bar-action-item iconClass="fa fa-search" contentClass="search-bar">
+            <app-search-input></app-search-input>
+        </ux-layout-nav-bar-action-item>
+    </uxAppShellNavBarItemsContent>
+
+</ux-layout-app-shell>
+
