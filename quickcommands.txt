@@ -7,3 +7,15 @@ new class
 
 ..\ng g c test
 
+
+ng new new_project_name --routing
+
+##To add routing in existing module
+## index.html <base href="/">
+## new file app-name.module.ts
+## import the new file in the app.module
+
+
+##new components
+## ng g c COMPONENT_NAME
+
