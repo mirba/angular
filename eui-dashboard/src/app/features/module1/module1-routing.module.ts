@@ -15,4 +15,4 @@ const routes: Routes = [
         RouterModule.forChild(routes)
     ],
 })
-export class Module1RoutingModule {}
+export class ProutingModule {}

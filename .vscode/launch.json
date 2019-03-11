@@ -8,6 +8,21 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
+            "program": "${workspaceFolder}/app.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "P-Routing Project",
+            "program": "${workspaceFolder}/prouting\\src\\app\\app.module.ts",
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Dashboard Project",
             "program": "${workspaceFolder}/dashboard\\src\\app\\app.module.ts",
             "outFiles": [
                 "${workspaceFolder}/**/*.js"
